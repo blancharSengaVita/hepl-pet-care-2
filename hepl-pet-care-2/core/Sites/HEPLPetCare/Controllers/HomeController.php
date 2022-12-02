@@ -16,7 +16,7 @@ class HomeController
 //        var_dump(Animal::listHomepageAnimals()); die();
         return App::getView('home', [
             'site_name' => 'HEPL Pet Care',
-            'animals' => (Animal::listHomepageAnimals()),
+            'animals' => Animal::listHomepageAnimals(),
         ]);
     }
 }

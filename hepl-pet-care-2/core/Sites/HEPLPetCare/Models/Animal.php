@@ -9,6 +9,7 @@ class Animal extends BaseModel
     public function homepageAnimals($connexion)
     {
         return $connexion->prepare('SELECT a.`name`,
+       a.`sterilized`,
             ap.`src`,
             ap.`alt`,
             b.`name` AS `breed`,

@@ -212,23 +212,38 @@ https://templatemo.com/tm-567-nomad-force
                     <div class="row">
 
                         <div class="col-12">
-                            <h2 class="mb-5 text-center" data-aos="fade-up">adopter les</h2>
+                            <h2 class="mb-5 text-center" data-aos="fade-up">Adoptez-les</h2>
                         </div>
 
+
+
                         <div class="col-lg-6 col-12">
+                            <?php foreach($animals as $animal): ?>
                             <div class="portfolio-thumb mb-5" data-aos="fade-up">
                                 <a href="images/portfolio/visuals-Y4qzW3AsvqI-unsplash.jpeg" class="image-popup">
-                                    <img src="images/portfolio/visuals-Y4qzW3AsvqI-unsplash.jpeg" class="img-fluid portfolio-image" alt="">
+                                    <img src="<?= $animal->src; ?>" class="img-fluid portfolio-image" alt="">
                                 </a>
 
                                 <div class="portfolio-info">                     
-                                    <h4 class="portfolio-title mb-0">Effortless</h4>
+                                    <h4 class="portfolio-title mb-0"><?= ucfirst($animal->name); ?></h4>
 
-                                    <p class="text-danger">Branding</p>
+                                    <p class="<?= $animal->color; ?>"><?= ucfirst($animal->species) . ', ' . lcfirst($animal->breed); ?></p>
+
+                                    <?php if($animal->sterilized): ?>
+                                        <p> stérilisé </p>
+                                    <?php elseif($animal->sterilized === NULL ): ?>
+                                        <p> non-stérilisé </p>
+                                    <?php endif; ?>
+
+
                                 </div>
-                            </div> 
-                            
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
+
+
+
                 </div>
             </section>
 

@@ -14,4 +14,4 @@
 define('MYSQL_HOST', '127.0.0.1');
 define('MYSQL_USER', 'root');
 define('MYSQL_PASSWORD', '');
-define('MYSQL_DBNAME', 'sgc_hepl_pet_care');
+define('MYSQL_DBNAME', 'sgc-hepl-pet-care-prof');
